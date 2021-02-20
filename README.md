@@ -14,7 +14,7 @@ View it in the terminal (cmd).
 You will also see any lint errors in the console.
 
 ### `Available Configuration for ide for Windows 10`
-"Edit Configurations..." -> "Run/Debug Configuration" -> "+ Node.js"
+"Edit Configurations..." -> "Run/Debug Configuration" -> "+ Node.js"\
 Node interpreter   - C:\Program Files\nodejs\node.exe
 Node parameters    - C:\Users\User\AppData\Roaming\npm\node_modules\nodemon\bin\nodemon.js
 Working directory  - "where project is"
