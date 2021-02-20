@@ -9,13 +9,17 @@ server.use(middlewares);
 
 // Custom middleware to access POST methids.
 // Can be customized for other HTTP method as well.
-server.use((req, res, next) => {
+server.use((request, response, next) => {
+
   console.log("POST request listener");
-  const body = req.body;
+
+  const body = request.body;
+
   console.log(body);
-  if (req.method === "POST") {
+
+  if (request.method === "POST") {
     // If the method is a POST echo back the name from request body
-    res.json({ message:"User created successfully", name: req.body.name});
+    response.json({ message:"User created successfully", name: request.body.name});
   }else{
       //Not a post request. Let db.json handle it
       next();
@@ -24,14 +28,8 @@ server.use((req, res, next) => {
 
 server.use(router);
 
-server.listen(3001, () => {
-  console.log("JSON Server is running");
+const PORT = process.env.PORT || 3001; 
+
+server.listen(PORT, () => {
+  console.log("JSON Server is running", PORT);
 });
-
-
-//Windows 10
-//Webstorm "Edit Configurations..." -> "Run/Debug Configuration" -> "+ Node.js"
-//Node interpreter C:\Program Files\nodejs\node.exe
-//Node parameters C:\Users\User\AppData\Roaming\npm\node_modules\nodemon\bin\nodemon.js
-//Working directory "where project is"
-//Javascript file index.js

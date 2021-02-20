@@ -1,25 +1,3 @@
 {
-  "send": [
-    {
-      "fullName": "",
-      "email": "",
-      "phone": "",
-      "message": "",
-      "id": 1
-    },
-    {
-      "fullName": "sdaad@gmail.com",
-      "email": "sdaad@gmail.com",
-      "phone": "",
-      "message": "sdaad@gmail.com",
-      "id": 2
-    },
-    {
-      "fullName": "sadfsd",
-      "email": "sadf@gmail.com",
-      "phone": "",
-      "message": "asfkd",
-      "id": 3
-    }
-  ]
+  "send": []
 }
